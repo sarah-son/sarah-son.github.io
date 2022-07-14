@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" /><strong></strong>
+        <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Heart Disease Predictor</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
    <body>
         <!-- Navigation-->
@@ -26,22 +26,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('about')}}">Data Visualizations</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('post')}}">Data Modeling</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('contact')}}">Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">Data Visualizations</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Data Modeling</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Conclusion</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url({{url_for('static', filename='assets/img/contact_bg.webp')}})">
+        <header class="masthead" style="background-image: url('assets/img/contact_bg.webp')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
                             <h1>Conclusion</h1>
-                            <span class="subheading">Made by Robot Squad</span>
+                            <span class="subheading">Have questions? I have answers.</span>
                         </div>
                     </div>
                 </div>
@@ -63,76 +63,7 @@
               </div>
           </div>
         </main>
-
-
- 
-<div class="container px-4 px-lg-5">
-   <div class="row gx-4 gx-lg-5 justify-content-center">
-   <div class="col-md-10 col-lg-8 col-xl-7">
-  <h3>Heart Disease Predictor</h3>
-  <form action="" method="POST">
-    <label for="Age">Age: [28-77] </label>
-    <input type="text" id="Age" name="Age">
-    <br> <br>
-    <label for="Sex">Sex:</label>
-    <select id="Sex" name="Sex">
-      <option value="0">F</option>
-      <option value="1">M</option>
-    </select>
-    <br> <br>
-    <label for="ChestPainType">Chest Pain Type: </label>
-    <select id="ChestPainType" name="ChestPainType">
-      <option value="0">ASY</option>
-      <option value="1">ATA</option>
-      <option value="2">NAP</option>
-    </select>
-    <br> <br>
-    <label for="RestingBP">Resting Blood Pressure:[0-200] </label>
-    <input type="text" id="RestingBP" name="RestingBP">
-    <br> <br>
-    <label for="floors">Cholesterol:[0-700] </label>
-    <input type="text" id="Cholesterol" name="Cholesterol">
-    <br> <br>
-    <label for="FastingBS">Fasting Blood Sugar: [0-1] </label>
-    <input type="text" id="FastingBS" name="FastingBS">
-    <br> <br>
-    <label for="view">Resting ECG:</label>
-    <select id="view" name="view">
-      <option value="0">Normal</option>
-      <option value="1">ST</option>
-
-    </select>
-    <br> <br>
-    <label for="Max HR">Max HR:[0-200]</label>
-    <input type="text" id="Max HR" name="Max HR">
-   
-    <br> <br>
-    <label for="ExerciseAngina">Exercise Angina:</label>
-    <select id="ExerciseAngina" name="ExerciseAngina">
-      <option value="0">N</option>
-      <option value="1">Y</option>
-    </select>
-    <br> <br>
-    <label for="Oldpeak">Old Peak:[-2.6 - 6.2] </label>
-    <input type="text" id="Oldpeak" name="Oldpeak">
-    <br> <br>
-    <label for="ST_Slope">ST Slope(the slope of the peak exercise ST segment):</label>
-    <select id="ST_Slope" id="ST_Slope" name="ST_Slope">
-      <option value="1">Flat</option>
-      <option value="2">Up</option>
-    </select>
-    <br> <br>
-    <input type="submit" value="Submit"> <br>
-    </form>
-  {% if prediction_text %}
-           <p class= "lead" style="margin-left:150px; margin-top: 2rem;"><b>
-             Your predicted diagnosis is {{ prediction_text }}!
-                 </b> </p>
                   
-          {% endif %}
-  </div>
-  </div>
-</div>
                   
                   
 <!--- Team info -->
@@ -240,6 +171,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="/static/js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
